@@ -1,10 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 
 import styles from './NextEventCard.style';
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const NextEventCard = ({ dia, mes, ano, image, desc }) => {
+const NextEventCard = ({ dia, mes, ano, imagem, dimension }) => {
+  console.log('Imagem do card evento: ' + imagem);
   return (
     <TouchableOpacity style={styles.nextEventCardWrapper}>
       <View style={styles.dataArea}>
@@ -13,7 +14,15 @@ const NextEventCard = ({ dia, mes, ano, image, desc }) => {
         <Text style={styles.anoText}>{ano}</Text>
       </View>
       <View>
-        <Image source={image} style={styles.bannerImage} alt={desc}/>
+      <TouchableOpacity>
+
+        <Image 
+          source={{imagem}} 
+          style={styles.imgEventCard(dimension)} 
+          // alt={desc}
+          resizeMode='contain'
+        />
+      </TouchableOpacity>
       </View>
     </TouchableOpacity>
   )

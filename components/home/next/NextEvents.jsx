@@ -33,8 +33,9 @@ const NextEvents = () => {
             dia='10'
             mes='Junho'
             ano='2023'
-            image={images.cardEvento1}
+            imagem={images.cardEvento1}
             desc='Evento de neurotec'
+            dimension='60%'
         />
       </View>
     </View>

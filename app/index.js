@@ -3,8 +3,7 @@ import { View, ScrollView, SafeAreaView, Text } from 'react-native';
 import { Stack, useRouter } from 'expo-router';
 
 import { COLORS, icons, images, SIZES } from '../constants';
-import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome } from '../components';
-import { ImageBackground } from 'react-native-web';
+import { Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome, NextEvents } from '../components';
 
 const Home = () => {
     const router = useRouter();
@@ -26,11 +25,9 @@ const Home = () => {
             />
 
             <ScrollView showsHorizontalScrollIndicator={false}>
-                <View
-                    style={{flex: 1, padding: SIZES.medium}}
-                >
+                <View style={{flex: 1, padding: SIZES.medium}}>
                     <Welcome />
-                    {/* <NextEvents /> */}
+                    <NextEvents />
                     <Popularjobs />
                     <Nearbyjobs />
                 </View>
